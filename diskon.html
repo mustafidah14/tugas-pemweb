@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hitung Diskon</title>
+    <style type="text/css">
+        main{
+            max-width: 100%;
+            margin-left: 15%;
+            margin-top: 10%;
+            border: 6px solid green;
+            border-radius: 10px 10px;
+            width: 70%;
+            height: 40%;
+            text-align: center;
+            background-color: rgb(182, 168, 125);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1> Hitung Diskon </h1>
+        <form name="Diskon">
+            <p></p>
+            harga<br>
+            <input type="text" name="harga">
+            <p></p>
+            nominal persen<br>
+            <input type="text" name="persen">
+            <br>
+            <input type="button" name="cek" value="CEK" onclick="Cek_Diskon();">
+            <div>
+            harga setelah diskon
+            <br>
+            <input type="text" name="hasil">
+            <p></p>
+            </div>
+        </form>
+ 
+        <script type="text/javascript">
+            function Cek_Diskon() { 
+                var harga = document.Diskon.harga.value; 
+                var persen = document.Diskon.persen.value; 
+                harga = parseInt(harga); 
+                persen = parseInt(persen); 
+                var hasil = harga * (persen/100); 
+                hasil = harga - parseInt(hasil); 
+                document.Diskon.hasil.value = hasil; 
+            }
+        </script>
+    </main>
+</body>
+</html>
